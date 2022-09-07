@@ -1,17 +1,15 @@
-// // function sayHello() {
-// //     console.log("Hello World")
-// //  }
-
-// let question = prompt("What is your choice: ?");
-
-
 function getComputerChoice (){
     const gameRandom = ['rock', 'paper', 'scissors']; 
-    return gameRandom[Math.floor(gameRandom.length * Math.random())];
-    
+    return gameRandom[Math.floor(gameRandom.length * Math.random())]; 
 }
 
-function singleRound (playerSelection, computerSelection) {
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playRound();
+     }
+    }
+
+function playRound (playerSelection, computerSelection) {
     //answer = answer == tie
     if (playerSelection === computerSelection) {
         return `Tied game! Both parties picked: ${playerSelection}`;
@@ -30,11 +28,10 @@ function singleRound (playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
-const computerSelection = getComputerChoice();
-console.log(singleRound(playerSelection, computerSelection));
+    const playerSelection = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
 
-function game(singleRound) {
-    for (let i = 0; i < 5; i++) {
-    }
-}
+
+
+       
